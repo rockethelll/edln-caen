@@ -1,12 +1,36 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
+import { Card } from './card/card';
+import { CARDS } from './data/cards';
+import { Navbar } from './navbar/navbar';
+import { TextWithWave } from './text-with-wave/text-with-wave';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Navbar, TextWithWave, Card],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected title = 'edln-caen';
+  currentYear = new Date().getFullYear();
+  cards = CARDS;
+
+  constructor(protected title: Title, protected meta: Meta) {
+    this.title.setTitle('EDLN Caen – Découvre le scoutisme autrement');
+    this.meta.addTags([
+      {
+        name: 'description',
+        content:
+          'Groupe des Éclaireuses et Éclaireurs de France à Caen. Scoutisme laïque, nature et aventure pour les jeunes de 6 à 17 ans.',
+      },
+      { property: 'og:title', content: 'EDLN Caen – Scoutisme et nature' },
+      {
+        property: 'og:description',
+        content:
+          'Découvre le scoutisme dans un cadre naturel et solidaire à Caen.',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://edln-caen.vercel.app' },
+    ]);
+  }
 }

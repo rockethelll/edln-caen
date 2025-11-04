@@ -1,0 +1,27 @@
+<nav
+  class="h-16 sm:h-24 bg-green-900 flex items-center transition-opacity duration-300"
+  [style.opacity]="opacity"
+  [style.pointer-events]="opacity === 0 ? 'none' : 'auto'"
+>
+  <div class="container mx-auto px-4 relative flex items-center">
+    <a href="https://edln.org/">
+      <img
+        src="/images/logo-edln.svg"
+        alt="Logo EDLN Caen"
+        class="h-10 sm:h-16"
+      />
+    </a>
+    <p
+      class="absolute left-1/2 -translate-x-1/2 text-2xl sm:text-5xl font-novo text-center text-white"
+    >
+      EDLN de Caen
+    </p>
+  </div>
+</nav>
+<section class="sm:mb-16 mb-10">
+  <img
+    src="/images/Hero-edln.webp"
+    alt="Hero EDLN Caen"
+    class="w-full h-auto"
+  />
+</section>

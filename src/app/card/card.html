@@ -1,0 +1,17 @@
+<a
+  [href]="link()"
+  [class]="'block hover:scale-102 transition-transform duration-300 hover:rotate-1 max-w-[325px] ' + tiltClass()"
+  target="_blank"
+>
+  <div
+    [class]="color() + ' h-[400px] rounded-lg flex flex-col items-center p-12 shadow-lg'"
+  >
+    <img
+      [src]="image()"
+      [alt]="'image du groupe des ' + name()"
+      class="w-full h-auto object-cover mb-6 rounded-lg aspect-square bg-white"
+    />
+    <p class="text-white font-novo text-2xl">{{ name() }}</p>
+    <p class="text-white font-novo text-2xl">{{ age() }}</p>
+  </div>
+</a>

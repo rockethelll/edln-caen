@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://db.onlinewebfonts.com/c/9335b3b950958da955c996c03a2421cc?family=Noovo+ITC+Std+Bold");
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --font-novo: "Noovo ITC Std Bold", sans-serif;
+  --color-colibris: #e5b534;
+  --color-voyageurs: #1d355f;
+  --color-vaillants: #266638;
+  --color-pionniers: #b72e2c;
+  --color-compagnons: #e6e1d9;
+}
+
+

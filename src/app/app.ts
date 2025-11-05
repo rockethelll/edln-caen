@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
 import { Card } from './card/card';
 import { CARDS } from './data/cards';
+import { mailBodyTemplate, mailSubjectTemplate } from './data/mail-inscription';
 import { Navbar } from './navbar/navbar';
 import { TextWithWave } from './text-with-wave/text-with-wave';
 
@@ -14,9 +15,16 @@ import { TextWithWave } from './text-with-wave/text-with-wave';
 export class App {
   currentYear = new Date().getFullYear();
   cards = CARDS;
+  bodyTemplate = mailBodyTemplate;
+  subjectTemplate = mailSubjectTemplate;
 
-  constructor(protected title: Title, protected meta: Meta) {
-    this.title.setTitle('EDLN Caen – Découvre le scoutisme autrement');
+  mailtoHref =
+    'mailto:gl.caen@edln.org?subject=' +
+    encodeURIComponent(this.subjectTemplate) +
+    '&body=' +
+    encodeURIComponent(this.bodyTemplate);
+
+  constructor(protected meta: Meta) {
     this.meta.addTags([
       {
         name: 'description',

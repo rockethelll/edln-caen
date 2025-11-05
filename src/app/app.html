@@ -29,8 +29,7 @@
   <!-- Jeunes et adultes du mouvement -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Jeu" />nes
-      et adultes du mouvement
+      <app-text-with-wave text="Jeu" />nes et adultes du mouvement
     </h2>
     <div class="flex flex-wrap gap-10 justify-center mt-8">
       @for (card of cards; track card.name) {
@@ -48,16 +47,136 @@
   <!-- Inscrire votre enfant -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Ins" />crire
-      votre enfant
+      <app-text-with-wave text="Ins" />crire votre enfant
     </h2>
-    <p class="sm:mt-16 mt-10 sm:text-xl before:content-['\201C'] before:absolute before:left-0 before:top-0 before:w-1 before:h-full before:bg-green-900">Rejoindre un groupe local des Éclaireuses et Éclaireurs de la Nature, c’est une expérience enrichissante, ludique et formatrice, au service d’un monde plus solidaire et respectueux de la nature.</p>
-    <img src="/images/jamboree.webp" alt="Jamboree EDLN Caen" class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto">
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Rejoindre un groupe local des Éclaireuses et Éclaireurs de la Nature,
+      c’est une expérience enrichissante, ludique et formatrice, au service d’un
+      monde plus solidaire et respectueux de la nature.
+    </p>
+    <img
+      src="/images/jamboree.webp"
+      alt="Jamboree EDLN Caen"
+      class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
+    />
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Si vous souhaitez inscrire votre enfant, contactez-nous en cliquant sur le
+      bouton ci-dessous. Nous reviendrons ensuite vers vous pour vous dire s’il
+      reste des places et si nous pouvons donner suite à votre demande.
+    </p>
     <a
-      href="https://edln.org/decouvrir-les-eclaireuses-et-eclaireurs-de-la-nature/"
-      target="_blank"
+      [href]="mailtoHref"
       class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center w-1/2 mx-auto mt-16 rounded sm:w-fit"
       ><app-text-with-wave text="Ins" />crire votre enfant</a
     >
+  </section>
+
+  <!-- Quel est le rythme des activités ? -->
+  <section class="sm:mt-32 mt-16">
+    <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
+      <app-text-with-wave text="Que" />l est le rythme des activités ?
+    </h2>
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Les activités sont au rythme d’une sortie par mois. Les sorties sont le
+      dimanche de 10h45 à 16h30.
+      <br /><br />
+      3 fois dans l’année, à l’automne et au printemps, les sorties sont
+      remplacées par des weekends campés sous tente.
+      <br /><br />
+      L’année se termine par un camp d’été, d’une à quatre semaines en fonction
+      de l’âge des enfants. Pour connaitre le planning détaillé de l’année,
+      écrivez-nous à
+      <a
+        href="mailto:gl.caen@edln.org?subject=Planning détaillé de l\'année"
+        class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
+        >gl.caen@edln.org</a
+      >
+    </p>
+    <img
+      src="/images/camp.webp"
+      alt="Weekend campé sous tente"
+      class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
+    />
+  </section>
+
+  <!-- Où se déroulent les activités ? -->
+  <section class="sm:mt-32 mt-16">
+    <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
+      <app-text-with-wave text="Où" /> se déroulent les activités ?
+    </h2>
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Les sorties à la journée ont lieux dans la région caennaise : parcs, bois,
+      forêts et salles de quartiers en cas d’intempéries.
+      <br /><br />
+      Les weekends campés ont lieux en Normandie.
+      <br /><br />
+      Les camps se déroulent en Normandie, en France où à l’étranger en fonction
+      des projets souhaités par les jeunes et les projets pédagogiques mis en
+      place chaque année.
+    </p>
+    <img
+      src="/images/activites.webp"
+      alt="Activités de pleine nature"
+      class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
+    />
+  </section>
+
+  <!-- Quel est le cout des activités ? -->
+  <section class="sm:mt-32 mt-16">
+    <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
+      <app-text-with-wave text="Que" />l est le cout des activités ?
+    </h2>
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Le coût des activités auprès du groupe de Caen est de 120 € pour l’année
+      scolaire (période septembre - juin).
+      <br /><br />
+      Le prix est dégressif si plusieurs enfants d’une même fratrie sont
+      inscrits (100 € pour le 2iéme enfant, 80 € pour les suivants).
+      <br /><br />
+      Pour les colibris (6-8 ans) qui ont moins de weekends campés et dont
+      l’organisation est portée par les parents, le coût est de 60€.
+      <br /><br />
+      Cette somme permet de financer l’achat du matériel de campisme (tentes,
+      matériel de cuisine, etc.), le matériel des activités ou sorties sur
+      l’année, les frais des week-end (nourriture, transport des bénévoles...),
+      la formation (interne et BAFA) des chefs et bénévoles, etc.
+      <br /><br />
+      Parallèlement, il faut s’acquitter d’une adhésion à l’association EDLN. Elle garantit
+      l’assurance de votre enfant et permet au bureau national de fonctionner.
+      Le montant de l’adhésion est variable en fonction de vos revenus, entre
+      30,00€ et 110,00€ par année scolaire. Notre association étant reconnue
+      d’intérêt général, l’adhésion ouvre droit à une réduction d’impôt à
+      hauteur de 66 %.
+    </p>
+    <img
+      src="/images/cout.webp"
+      alt="Scouts en pleine nature"
+      class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
+    />
+  </section>
+
+  <!-- Devenir bénévole -->
+  <section class="sm:mt-32 mt-16 mb-32">
+    <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
+      <app-text-with-wave text="Dev" />enir bénévole
+    </h2>
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Toutes nos activités sont encadrées et gérées par des bénévoles. Si vous souhaitez participer avec nous à ce projet, écrivez-nous à <a
+        href="mailto:gl.caen@edln.org?subject=Devenir bénévole"
+        class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
+        >gl.caen@edln.org</a
+      >.
+    </p>
+    <a
+      href="https://edln.org/devenir-benevole-aux-eclaireuses-et-eclaireurs-de-la-nature/"
+      target="_blank"
+      class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center w-1/2 mx-auto mt-16 rounded sm:w-fit"
+      ><app-text-with-wave text="Plu" />s d'informations</a
+    >
+    <img
+      src="/images/cout.webp"
+      alt="Scouts en pleine nature"
+      class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
+    />
   </section>
 </div>

@@ -1,35 +1,72 @@
 <app-navbar />
+<!-- Données structurées JSON-LD pour le SEO -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Association",
+    "name": "Éclaireuses et Éclaireurs de la Nature - Groupe de Caen",
+    "alternateName": "EDLN Caen",
+    "description": "Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends."
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Éclaireuses et Éclaireurs de la Nature",
+    "alternateName": "EDLN",
+    "url": "https://edln.org",
+    "logo": "https://edln-caen.vercel.app/images/logo-edln.svg",
+    "description": "Mouvement scout membre de la Fédération du Scoutisme Français, alliant pédagogie du scoutisme et éducation à la Pleine Conscience et à l'écologie.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Caen",
+      "addressRegion": "Normandie",
+      "addressCountry": "FR"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Fédération du Scoutisme Français"
+    }
+  }
+</script>
 <div class="container mx-auto px-4">
   <!-- Qui sommes-nous ? -->
   <section>
     <h1 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Qui" />
+      <span class="text-with-wave">Qui</span>
       sommes-nous ?
     </h1>
     <p class="sm:mt-16 mt-10 sm:text-xl">
-      L'association des Éclaireuses et des Éclaireurs de la Nature est un
+      Le groupe des
+      <b>Éclaireuses et Éclaireurs de la Nature (EDLN) de Caen</b> est un
       <b>mouvement scout</b> membre de la
       <a
         href="https://www.scoutisme-francais.fr/"
         target="_blank"
+        rel="noopener noreferrer"
+        title="Fédération du Scoutisme Français - Scouts de France"
         class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
         >Fédération du Scoutisme Français</a
-      >, fruit de la rencontre entre la <b>pédagogie actuelle du scoutisme</b>,
-      et
-      <b>l’éducation à la Pleine Conscience et à l’écologie.</b>
+      >. Notre groupe scout à Caen en Normandie est le fruit de la rencontre
+      entre la <b>pédagogie actuelle du scoutisme</b>, et
+      <b>l'éducation à la Pleine Conscience et à l'écologie.</b> Rejoignez les
+      scouts de Caen pour découvrir le scoutisme autrement.
     </p>
     <a
       href="https://edln.org/decouvrir-les-eclaireuses-et-eclaireurs-de-la-nature/"
       target="_blank"
+      rel="noopener noreferrer"
+      title="Découvrir les Éclaireuses et Éclaireurs de la Nature - Scoutisme et nature"
       class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center w-1/2 mx-auto mt-16 rounded sm:w-fit"
-      ><app-text-with-wave text="Tou" />r d'horizon de l'association</a
+      ><span class="text-with-wave">Tou</span>r d'horizon de l'association</a
     >
   </section>
 
   <!-- Jeunes et adultes du mouvement -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Jeu" />nes et adultes du mouvement
+      <span class="text-with-wave">Jeu</span>nes et adultes du mouvement
     </h2>
     <div class="flex flex-wrap gap-10 justify-center mt-8">
       @for (card of cards; track card.name) {
@@ -47,16 +84,17 @@
   <!-- Inscrire votre enfant -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Ins" />crire votre enfant
+      <span class="text-with-wave">Ins</span>crire votre enfant
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
-      Rejoindre un groupe local des Éclaireuses et Éclaireurs de la Nature,
-      c’est une expérience enrichissante, ludique et formatrice, au service d’un
-      monde plus solidaire et respectueux de la nature.
+      Rejoindre notre <b>groupe scout à Caen</b> des Éclaireuses et Éclaireurs
+      de la Nature, c'est une expérience enrichissante, ludique et formatrice,
+      au service d'un monde plus solidaire et respectueux de la nature.
+      Inscrivez votre enfant au scoutisme à Caen en Normandie.
     </p>
     <img
       src="/images/jamboree.webp"
-      alt="Jamboree EDLN Caen"
+      alt="Jamboree scouts EDLN Caen - Éclaireurs de la Nature en Normandie"
       class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
     />
     <p class="sm:mt-16 mt-10 sm:text-xl">
@@ -67,14 +105,14 @@
     <a
       [href]="mailtoHref"
       class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center w-1/2 mx-auto mt-16 rounded sm:w-fit"
-      ><app-text-with-wave text="Ins" />crire votre enfant</a
+      ><span class="text-with-wave">Ins</span>crire votre enfant</a
     >
   </section>
 
   <!-- Quel est le rythme des activités ? -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Que" />l est le rythme des activités ?
+      <span class="text-with-wave">Que</span>l est le rythme des activités ?
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
       Les activités sont au rythme d’une sortie par mois. Les sorties sont le
@@ -88,13 +126,14 @@
       écrivez-nous à
       <a
         href="mailto:gl.caen@edln.org?subject=Planning détaillé de l\'année"
+        title="Contactez les scouts EDLN Caen pour le planning"
         class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
         >gl.caen@edln.org</a
       >
     </p>
     <img
       src="/images/camp.webp"
-      alt="Weekend campé sous tente"
+      alt="Weekend campé sous tente - Scouts EDLN Caen Normandie"
       class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
     />
   </section>
@@ -102,21 +141,22 @@
   <!-- Où se déroulent les activités ? -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Où" /> se déroulent les activités ?
+      <span class="text-with-wave">Où</span> se déroulent les activités ?
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
-      Les sorties à la journée ont lieux dans la région caennaise : parcs, bois,
-      forêts et salles de quartiers en cas d’intempéries.
+      Les sorties à la journée ont lieux dans la région caennaise : parcs, bois,
+      forêts et salles de quartiers en cas d'intempéries.
       <br /><br />
       Les weekends campés ont lieux en Normandie.
       <br /><br />
-      Les camps se déroulent en Normandie, en France où à l’étranger en fonction
+      Les camps se déroulent en Normandie, en France où à l'étranger en fonction
       des projets souhaités par les jeunes et les projets pédagogiques mis en
-      place chaque année.
+      place chaque année. Découvrez le scoutisme à Caen et ses activités en
+      pleine nature.
     </p>
     <img
       src="/images/activites.webp"
-      alt="Activités de pleine nature"
+      alt="Activités de pleine nature - Scouts EDLN Caen en Normandie"
       class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
     />
   </section>
@@ -124,7 +164,7 @@
   <!-- Quel est le cout des activités ? -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Que" />l est le cout des activités ?
+      <span class="text-with-wave">Que</span>l est le cout des activités ?
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
       Le coût des activités auprès du groupe de Caen est de 120 € pour l’année
@@ -141,16 +181,16 @@
       l’année, les frais des week-end (nourriture, transport des bénévoles...),
       la formation (interne et BAFA) des chefs et bénévoles, etc.
       <br /><br />
-      Parallèlement, il faut s’acquitter d’une adhésion à l’association EDLN. Elle garantit
-      l’assurance de votre enfant et permet au bureau national de fonctionner.
-      Le montant de l’adhésion est variable en fonction de vos revenus, entre
-      30,00€ et 110,00€ par année scolaire. Notre association étant reconnue
-      d’intérêt général, l’adhésion ouvre droit à une réduction d’impôt à
-      hauteur de 66 %.
+      Parallèlement, il faut s’acquitter d’une adhésion à l’association EDLN.
+      Elle garantit l’assurance de votre enfant et permet au bureau national de
+      fonctionner. Le montant de l’adhésion est variable en fonction de vos
+      revenus, entre 30,00€ et 110,00€ par année scolaire. Notre association
+      étant reconnue d’intérêt général, l’adhésion ouvre droit à une réduction
+      d’impôt à hauteur de 66 %.
     </p>
     <img
       src="/images/cout.webp"
-      alt="Scouts en pleine nature"
+      alt="Scouts EDLN Caen en pleine nature - Éclaireurs de la Nature Normandie"
       class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
     />
   </section>
@@ -158,11 +198,14 @@
   <!-- Devenir bénévole -->
   <section class="sm:mt-32 mt-16 mb-32">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <app-text-with-wave text="Dev" />enir bénévole
+      <span class="text-with-wave">Dev</span>enir bénévole
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
-      Toutes nos activités sont encadrées et gérées par des bénévoles. Si vous souhaitez participer avec nous à ce projet, écrivez-nous à <a
+      Toutes nos activités sont encadrées et gérées par des bénévoles. Si vous
+      souhaitez participer avec nous à ce projet, écrivez-nous à
+      <a
         href="mailto:gl.caen@edln.org?subject=Devenir bénévole"
+        title="Devenir bénévole chez les scouts EDLN Caen"
         class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
         >gl.caen@edln.org</a
       >.
@@ -170,12 +213,14 @@
     <a
       href="https://edln.org/devenir-benevole-aux-eclaireuses-et-eclaireurs-de-la-nature/"
       target="_blank"
+      rel="noopener noreferrer"
+      title="Devenir bénévole aux Éclaireuses et Éclaireurs de la Nature"
       class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center w-1/2 mx-auto mt-16 rounded sm:w-fit"
-      ><app-text-with-wave text="Plu" />s d'informations</a
+      ><span class="text-with-wave">Plu</span>s d'informations</a
     >
     <img
       src="/images/cout.webp"
-      alt="Scouts en pleine nature"
+      alt="Scouts EDLN Caen en pleine nature - Éclaireurs de la Nature Normandie"
       class="w-full h-auto object-cover mb-6 rounded-lg bg-white mt-16 aspect-auto"
     />
   </section>

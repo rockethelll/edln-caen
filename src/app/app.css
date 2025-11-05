@@ -1,0 +1,15 @@
+.text-with-wave {
+  position: relative;
+}
+
+.text-with-wave::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.75rem; /* -bottom-3 */
+  height: 0.75rem; /* h-3 */
+  width: 100%;
+  background-image: url("/images/wave.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edln-caen.vercel.app/sitemap.xml
+

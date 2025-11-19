@@ -24,7 +24,7 @@ export default `<!DOCTYPE html>
     <meta property="og:url" content="https://edln-caen.vercel.app/"/>
     <meta property="og:title" content="EDLN Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie"/>
     <meta property="og:description" content="Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends. Inscription ouverte."/>
-    <meta property="og:image" content="https://edln-caen.vercel.app/images/Hero-edln.webp"/>
+    <meta property="og:image" content="https://edln-caen.vercel.app/images/hero-edln.webp"/>
     <meta property="og:locale" content="fr_FR"/>
     <meta property="og:site_name" content="EDLN Caen"/>
 
@@ -33,7 +33,7 @@ export default `<!DOCTYPE html>
     <meta name="twitter:url" content="https://edln-caen.vercel.app/"/>
     <meta name="twitter:title" content="EDLN Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie"/>
     <meta name="twitter:description" content="Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends."/>
-    <meta name="twitter:image" content="https://edln-caen.vercel.app/images/Hero-edln.webp"/>
+    <meta name="twitter:image" content="https://edln-caen.vercel.app/images/hero-edln.webp"/>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://edln-caen.vercel.app/"/>
@@ -44,6 +44,6 @@ export default `<!DOCTYPE html>
   <body><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
 </script>
     <app-root></app-root>
-  <script src="main-QHZSEB7Y.js" type="module"></script></body>
+  <script src="main-BXSLOSNZ.js" type="module"></script></body>
 </html>
 `;

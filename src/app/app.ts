@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { Card } from './card/card';
@@ -7,7 +8,7 @@ import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Card],
+  imports: [Navbar, Card, NgOptimizedImage],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

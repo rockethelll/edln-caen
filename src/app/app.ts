@@ -51,7 +51,7 @@ export class App {
       { property: 'og:url', content: 'https://edln-caen.vercel.app' },
       {
         property: 'og:image',
-        content: 'https://edln-caen.vercel.app/images/Hero-edln.webp',
+        content: 'https://edln-caen.vercel.app/images/hero-edln.webp',
       },
       { property: 'og:locale', content: 'fr_FR' },
       { name: 'twitter:card', content: 'summary_large_image' },

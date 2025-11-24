@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="fr" data-beasties-container><head>
     <meta charset="utf-8">
     <title>
-      EDLN Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie
+      Éclaireuses et Éclaireurs de la Nature - Groupe de Caen
     </title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +20,16 @@ export default `<!DOCTYPE html><html lang="fr" data-beasties-container><head>
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://edln-caen.vercel.app/">
-    <meta property="og:title" content="EDLN Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie">
+    <meta property="og:title" content="Éclaireuses et Éclaireurs de la Nature - Groupe de Caen">
     <meta property="og:description" content="Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends. Inscription ouverte.">
     <meta property="og:image" content="https://edln-caen.vercel.app/images/hero-edln.webp">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="EDLN Caen">
+    <meta property="og:site_name" content="Éclaireuses et Éclaireurs de la Nature - Groupe de Caen">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://edln-caen.vercel.app/">
-    <meta name="twitter:title" content="EDLN Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie">
+    <meta name="twitter:title" content="Éclaireuses et Éclaireurs de la Nature - Groupe de Caen">
     <meta name="twitter:description" content="Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends.">
     <meta name="twitter:image" content="https://edln-caen.vercel.app/images/hero-edln.webp">
 

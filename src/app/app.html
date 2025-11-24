@@ -31,17 +31,18 @@
   }
 </script>
 <!-- Hero image -->
-<section class="sm:mb-16 mb-10 sm:mx-auto sm:container">
+<section class="sm:mb-16 mb-10 sm:mx-auto sm:container sm:max-w-7xl">
   <img
     ngSrc="/images/hero-edln.webp"
     alt="Scouts EDLN Caen - Éclaireurs de la Nature en Normandie"
     width="970"
-    height="638"
+    height="425"
     priority
-    class="w-full h-auto"
+    class="w-full object-cover"
+    style="aspect-ratio: 970 / 425"
   />
 </section>
-<div class="container mx-auto px-4">
+<div class="container max-w-7xl mx-auto px-4">
   <!-- Qui sommes-nous ? -->
   <section>
     <h1 class="sm:text-7xl text-5xl font-novo text-green-900">
@@ -60,8 +61,8 @@
         class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
         >Fédération du Scoutisme Français</a
       >. Notre groupe scout à Caen en Normandie est le fruit de la rencontre
-      entre la <b>pédagogie actuelle du scoutisme</b>, et
-      <b>l'éducation à la Pleine Conscience et à l'écologie.</b> Rejoignez les
+      entre la <b>pédagogie actuelle du scoutisme</b> et
+      <b>l’éducation à la Pleine Conscience et à l’écologie.</b> Rejoignez les
       scouts de Caen pour découvrir le scoutisme autrement.
     </p>
     <a
@@ -99,8 +100,8 @@
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
       Rejoindre notre <b>groupe scout à Caen</b> des Éclaireuses et Éclaireurs
-      de la Nature, c'est une expérience enrichissante, ludique et formatrice,
-      au service d'un monde plus solidaire et respectueux de la nature.
+      de la Nature, c’est une expérience enrichissante, ludique et formatrice,
+      au service d’un monde plus solidaire et respectueux de la nature.
       Inscrivez votre enfant au scoutisme à Caen en Normandie.
     </p>
     <img
@@ -112,7 +113,7 @@
     />
     <p class="sm:mt-16 mt-10 sm:text-xl">
       Si vous souhaitez inscrire votre enfant, contactez-nous en cliquant sur le
-      bouton ci-dessous. Nous reviendrons ensuite vers vous pour vous dire s’il
+      bouton ci-dessous. Nous reviendrons ensuite vers vous pour vous dire s'il
       reste des places et si nous pouvons donner suite à votre demande.
     </p>
     <a
@@ -120,6 +121,26 @@
       class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center w-1/2 mx-auto mt-16 rounded sm:w-fit"
       ><span class="text-with-wave">Ins</span>crire votre enfant</a
     >
+    <div class="mt-8 text-center">
+      <p class="sm:text-lg text-base text-gray-700 mb-4">
+        Si le bouton ne fonctionne pas, vous pouvez nous écrire à :
+      </p>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <a
+          [href]="'mailto:' + emailAddress"
+          class="text-green-600 hover:text-green-700 transition-colors duration-300 underline font-semibold sm:text-xl text-lg"
+          >{{ emailAddress }}</a
+        >
+        <button
+          (click)="copyEmailToClipboard()"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded transition-colors duration-300 text-sm sm:text-base"
+          [class.bg-green-200]="emailCopied"
+          [class.text-green-800]="emailCopied"
+        >
+          {{ emailCopied ? '✓ Copié !' : 'Copier l\'adresse' }}
+        </button>
+      </div>
+    </div>
   </section>
 
   <!-- Quel est le rythme des activités ? -->
@@ -131,14 +152,14 @@
       Les activités sont au rythme d’une sortie par mois. Les sorties sont le
       dimanche de 10h45 à 16h30.
       <br /><br />
-      3 fois dans l’année, à l’automne et au printemps, les sorties sont
+      Trois fois dans l’année, à l’automne et au printemps, les sorties sont
       remplacées par des weekends campés sous tente.
       <br /><br />
       L’année se termine par un camp d’été, d’une à quatre semaines en fonction
-      de l’âge des enfants. Pour connaitre le planning détaillé de l’année,
+      de l’âge des enfants. Pour connaître le planning détaillé de l’année,
       écrivez-nous à
       <a
-        href="mailto:gl.caen@edln.org?subject=Planning détaillé de l\'année"
+        href="mailto:gl.caen@edln.org?subject=Planning détaillé de l’année"
         title="Contactez les scouts EDLN Caen pour le planning"
         class="text-green-600 hover:text-green-700 transition-colors duration-300 underline"
         >gl.caen@edln.org</a
@@ -160,13 +181,13 @@
       <span class="text-with-wave">Où</span> se déroulent les activités ?
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
-      Les sorties à la journée ont lieux dans la région caennaise : parcs, bois,
-      forêts et salles de quartiers en cas d'intempéries.
+      Les sorties à la journée ont lieu dans la région caennaise : parcs, bois,
+      forêts et salles de quartier en cas d’intempéries.
       <br /><br />
-      Les weekends campés ont lieux en Normandie.
+      Les weekends campés ont lieu en Normandie.
       <br /><br />
-      Les camps se déroulent en Normandie, en France où à l'étranger en fonction
-      des projets souhaités par les jeunes et les projets pédagogiques mis en
+      Les camps se déroulent en Normandie, en France ou à l’étranger en fonction
+      des projets souhaités par les jeunes et des projets pédagogiques mis en
       place chaque année. Découvrez le scoutisme à Caen et ses activités en
       pleine nature.
     </p>
@@ -180,32 +201,32 @@
     />
   </section>
 
-  <!-- Quel est le cout des activités ? -->
+  <!-- Quel est le coût des activités ? -->
   <section class="sm:mt-32 mt-16">
     <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
-      <span class="text-with-wave">Que</span>l est le cout des activités ?
+      <span class="text-with-wave">Que</span>l est le coût des activités ?
     </h2>
     <p class="sm:mt-16 mt-10 sm:text-xl">
       Le coût des activités auprès du groupe de Caen est de 120 € pour l’année
       scolaire (période septembre - juin).
       <br /><br />
       Le prix est dégressif si plusieurs enfants d’une même fratrie sont
-      inscrits (100 € pour le 2iéme enfant, 80 € pour les suivants).
+      inscrits (100 € pour le 2e enfant, 80 € pour les suivants).
       <br /><br />
-      Pour les colibris (6-8 ans) qui ont moins de weekends campés et dont
-      l’organisation est portée par les parents, le coût est de 60€.
+      Pour les colibris (6-8 ans), qui ont moins de weekends campés et dont
+      l’organisation est portée par les parents, le coût est de 60 €.
       <br /><br />
       Cette somme permet de financer l’achat du matériel de campisme (tentes,
       matériel de cuisine, etc.), le matériel des activités ou sorties sur
-      l’année, les frais des week-end (nourriture, transport des bénévoles...),
+      l’année, les frais des weekends (nourriture, transport des bénévoles...),
       la formation (interne et BAFA) des chefs et bénévoles, etc.
       <br /><br />
       Parallèlement, il faut s’acquitter d’une adhésion à l’association EDLN.
       Elle garantit l’assurance de votre enfant et permet au bureau national de
       fonctionner. Le montant de l’adhésion est variable en fonction de vos
-      revenus, entre 30,00€ et 110,00€ par année scolaire. Notre association
-      étant reconnue d’intérêt général, l’adhésion ouvre droit à une réduction
-      d’impôt à hauteur de 66 %.
+      revenus, entre 30 € et 110 € par année scolaire. Notre association étant
+      reconnue d’intérêt général, l’adhésion ouvre droit à une réduction d’impôt
+      à hauteur de 66 %.
     </p>
     <img
       ngSrc="/images/cout.webp"
@@ -247,5 +268,32 @@
       priority
       class="w-full h-auto mb-6 rounded-lg bg-white mt-16"
     />
+  </section>
+
+  <!-- BAFA -->
+  <section class="sm:mt-32 mt-16 mb-32">
+    <h2 class="sm:text-7xl text-5xl font-novo text-green-900">
+      <span class="text-with-wave">Pas</span>se ton BAFA avec nous !
+    </h2>
+    <p class="sm:mt-16 mt-10 sm:text-xl">
+      Découvrez notre formation BAFA au format "camp école" et nos
+      approfondissements en management ou écologie.
+    </p>
+    <div class="mt-8 flex justify-center">
+      <a
+        href="/BAFA_Caen.pdf"
+        download="BAFA_Caen.pdf"
+        class="text-white font-novo sm:text-5xl text-3xl bg-green-900 hover:bg-green-700 p-4 transition-colors duration-300 block text-center rounded sm:w-fit"
+        ><span class="text-with-wave">Tél</span>écharger le PDF</a
+      >
+    </div>
+    <div class="mt-16 w-full">
+      <iframe
+        src="/BAFA_Caen.pdf#view=FitH&navpanes=0"
+        class="w-full h-[600px] sm:h-[1800px] border border-gray-300 rounded-lg mx-auto"
+        title="Document PDF BAFA Caen"
+        style="display: block; margin: 0 auto"
+      ></iframe>
+    </div>
   </section>
 </div>

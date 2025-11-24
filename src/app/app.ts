@@ -17,6 +17,8 @@ export class App {
   cards = CARDS;
   bodyTemplate = mailBodyTemplate;
   subjectTemplate = mailSubjectTemplate;
+  emailAddress = 'gl.caen@edln.org';
+  emailCopied = false;
 
   mailtoHref =
     'mailto:gl.caen@edln.org?subject=' +
@@ -24,28 +26,40 @@ export class App {
     '&body=' +
     encodeURIComponent(this.bodyTemplate);
 
+  async copyEmailToClipboard(): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(this.emailAddress);
+      this.emailCopied = true;
+      setTimeout(() => {
+        this.emailCopied = false;
+      }, 2000);
+    } catch (err) {
+      console.error('Erreur lors de la copie:', err);
+    }
+  }
+
   constructor(protected meta: Meta) {
     // Meta tags SEO optimisés avec tous les mots-clés
     this.meta.addTags([
       {
         name: 'description',
         content:
-          'Groupe scout EDLN Caen - Éclaireuses et Éclaireurs de la Nature. Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends. Inscription ouverte.',
+          "Groupe EDLN Caen - Éclaireuses et Éclaireurs de la Nature. Scoutisme écologique et pleine conscience à Caen en Normandie. Éducation globale de sagesse, non-violence et sens pour enfants et jeunes de 6 à 20 ans. Bâtir un avenir désirable par le jeu, l'aventure et la compassion.",
       },
       {
         name: 'keywords',
         content:
-          'scouts caen, scout caen, scoutisme caen, éclaireurs caen, scouts normandie, scoutisme normandie, edln caen, éclaireuses éclaireurs nature, groupe scout caen, scoutisme nature caen',
+          'edln caen, éclaireuses éclaireurs nature caen, scoutisme écologique caen, scoutisme pleine conscience caen, scoutisme nature caen, scouts caen, scoutisme normandie, éducation sagesse caen, scoutisme non-violence, méditation scoutisme, scoutisme compassion, groupe local edln caen',
       },
       {
         property: 'og:title',
         content:
-          'Scouts Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie',
+          'EDLN Caen - Éclaireuses et Éclaireurs de la Nature | Scoutisme Écologique et Pleine Conscience',
       },
       {
         property: 'og:description',
         content:
-          'Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends. Inscription ouverte.',
+          "Groupe EDLN Caen - Scoutisme écologique et pleine conscience à Caen en Normandie. Éducation globale de sagesse, non-violence et sens pour enfants et jeunes de 6 à 20 ans. Bâtir un avenir désirable par le jeu, l'aventure et la compassion.",
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://edln-caen.vercel.app' },
@@ -58,12 +72,12 @@ export class App {
       {
         name: 'twitter:title',
         content:
-          'Scouts Caen - Éclaireurs de la Nature | Scoutisme à Caen Normandie',
+          'EDLN Caen - Éclaireuses et Éclaireurs de la Nature | Scoutisme Écologique et Pleine Conscience',
       },
       {
         name: 'twitter:description',
         content:
-          'Groupe scout EDLN Caen - Scoutisme à Caen en Normandie pour enfants et jeunes de 6 à 20 ans. Activités nature, camps et weekends.',
+          "Groupe EDLN Caen - Scoutisme écologique et pleine conscience à Caen. Éducation de sagesse, non-violence et sens pour enfants et jeunes de 6 à 20 ans. Bâtir un avenir désirable par le jeu, l'aventure et la compassion.",
       },
     ]);
   }
